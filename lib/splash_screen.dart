@@ -19,14 +19,13 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    super.initState();
-
     getValidationData().whenComplete(() async {
       Timer(Duration(seconds: 2), () {
         print('Timer triggered');
         Get.to(finalEmail == null ? LoginScreen() : HomePage());
       });
     });
+    super.initState();
   }
 
   Future getValidationData() async {

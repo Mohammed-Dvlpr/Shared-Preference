@@ -55,6 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 await SharedPreferences.getInstance();
             //setting the value in sp
             sharedPreferences.setString('email', emailControler.text);
+            print("data is set");
 
             Get.to(HomePage());
           },
